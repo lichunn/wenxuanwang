@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+
+    <base href="../">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="lib/jqzoomCase-master/css/base.css">
+    <link rel="stylesheet" href="css/xiangqing.css">
+    <link rel="stylesheet" href="swiper-4.5.0/dist/css/swiper.min.css">
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="js/common.js"></script>
+    <script src="lib/jquery-cookie/jquery.cookie.js"></script>
+    <script src="swiper-4.5.0/dist/js/swiper.min.js"></script>
+    <script src="lib/jqzoomCase-master/js/jquery.jqzoom-2.2.js"></script>
+    <script src="js/xiangqing.js"></script>
+
+</head>
+
+<body>
+    <!-- top-nav -->
+    <div class="unit top-nav cf">
+        <div class="top-nav-1">
+            <ul class="list link-list fl">
+                <li> <a href="javascript:void(0);" class="add_favorite"><b class="icon16 icon16-1"></b>收藏文轩网</a> </li>
+            </ul>
+            <ul class="list link-list link-list-user fr cf">
+                <li> <span class="welcome">您好，欢迎光临文轩网！</span> </li>
+                <li class="login-box"> <a href="html/denglu.html" target="_blank">【登录】</a><a href="html/zhuce.html"
+                        target="_blank">【免费注册】</a>
+                    <!-- 已登录状态： <a href="#">退出</a> -->
+                </li>
+                <li class="li-1"> <s></s><a class="link-user" target="_blank">我的订单</a> </li>
+                <li class="li-2"> <s></s><a class="link-user" target="_blank">购书卡</a>
+                </li>
+                <li class="li-3"> <s></s><a class="link-user link-user-icon" target="_blank"><span
+                            class="outline"></span><span class="overlayout"></span>新手入门<b></b></a>
+                    <div class="pop">
+                        <ul class="pop-user-list">
+                            <li> <a href="http://www.winxuan.com/help/shopping_insurance.html" target="_blank">购物保障</a>
+                            </li>
+                            <li> <a href="http://www.winxuan.com/help/shopping_flow.html" target="_blank">购物流程</a> </li>
+                            <li> <a href="http://www.winxuan.com/help/faq.html" target="_blank">常见问题</a> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-3"> <s></s><a class="link-user link-user-icon" target="_blank"><span
+                            class="outline"></span><span class="overlayout"></span>帮助中心<b></b></a>
+                    <div class="pop">
+                        <ul class="pop-user-list">
+                            <li> <a href="http://www.winxuan.com/help/delivery_info_dynamic_query.html"
+                                    target="_blank">配送方式</a> </li>
+                            <li> <a href="http://www.winxuan.com/help/payment_on_arrival.html" target="_blank">货到付款</a>
+                            </li>
+                            <li> <a href="http://www.winxuan.com/help/apply_after_sales.html" target="_blank">售后服务</a>
+                            </li>
+                            <li> <a href="http://www.winxuan.com/customer/order" target="_blank">订单状态</a> </li>
+                            <li> <a href="http://www.winxuan.com/help/invoice.html" target="_blank">发票制度</a> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-3"> <s></s><a class="link-user link-user-icon"><span class="outline"></span><span
+                            class="overlayout"></span>客户服务<b></b></a>
+                    <div class="pop">
+                        <ul class="pop-user-list">
+                            <li> <a href="http://www.winxuan.com/help/contact.html" target="_blank">客服中心</a> </li>
+                            <li> <a href="http://www.winxuan.com/help/apply_after_sales.html" target="_blank">售后服务</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-3 li-4"> <s></s><a class="link-user link-user-icon"><span class="outline"></span><span
+                            class="overlayout"></span><i class="mobile-icon"></i>手机文轩<b></b></a>
+                    <div class="pop mobile-pop">
+                        <div class="mobile-code cf">
+                            <div class="mobile-code-item fl"><img data-lazy="false" src="./img/top/code1.jpg" alt=""><a
+                                    class="btn-1" href="javascript:void(0);">扫一扫 文轩手机购物 &gt;</a> </div>
+                            <div class="mobile-code-item fr"><img data-lazy="false" src="./img/top/code2.png" alt=""><a
+                                    class="btn-2" href="http://ebook.winxuan.com/cms/download" target="_blank">电子书
+                                    客户端 &gt;</a> </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div> <!-- top-nav end -->
+
+    <div class="master-header cf">
+        <!-- master-logo -->
+        <div class="master-header-1">
+            <div class="unit master-logo fl"> <a href="#"><img src="./img/logo.png" data-original="#" alt="文轩网"
+                        style="display: inline;"></a> </div> <!-- master-logo end -->
+            <!-- master-search -->
+            <div class="unit master-search fl">
+                <form method="get" action="http://search.winxuan.com/search" name="searchForm">
+                    <div class="master-search-box cf"> <input class="master-search-input fl ac_input" type="text"
+                            autocomplete="off" name="keyword"> <input type="hidden" value="" name="type"> <button
+                            class="master-search-btn fl" type="submit"> 搜索 </button> <a class="master-search-adv fl"
+                            target="_blank">高级搜索</a>
+                    </div>
+                </form>
+                <div class="master-search-keywords fl">
+                    热门搜索：<a target="_blank"><span style="color:#F00; font-weight:bold">少儿满100减50<img
+                                src="./img/top/hot.gif" style="vertical-align:top;"></span></a>
+                    <a target="_blank"><span style="color:#F00; font-weight:bold">褚时健<img src="./img/top/hot.gif"
+                                style="vertical-align:top;"></span></a>
+                    <a target="_blank"><span style="color:#F00; font-weight:bold">古董局中局<img src="./img/top/hot.gif"
+                                style="vertical-align:top;"></span></a>
+                    <a target="_blank"><span style="color:#F00; font-weight:bold">今日秒杀<img src="./img/top/hot.gif"
+                                style="vertical-align:top;"></span></a>
+                    <a target="_blank"><span style="color:#F00; font-weight:bold">积分兑礼券<img src="./img/top/hot.gif"
+                                style="vertical-align:top;"></span></a>
+                </div>
+            </div> <!-- master-search end -->
+            <!-- master-user -->
+            <div class="unit master-user fr cf">
+                <div class="master-user-sc fr">
+                    <div class="master-user-box"> <b></b><a href="html/car.html" class="master-user-btn master-user-sc-btn cart" target="_blank">购物车</a><s></s><span
+                            class="outline"></span><span class="topline"></span><span class="overlayout"></span>
+                        <div class="master-cartnum-pop"></div>
+                        <!-- col-base-1 -->
+                        <div class="carcontent">
+                           
+                                <!-- 无商品 -->
+                                <!-- <div class="no-goods-main">
+                                    您的购物车中没有商品哟~<br>赶快挑选心爱的商品吧！
+                                </div> -->
+                                <!-- 有商品 -->
+                                <!-- <div class="goods-main">
+                                    <div class="goods-main1">
+                                        <img src="img/xiaoshuo/1.jpg">
+                                        <div class="m1"></div>
+                                        <div style="float:right;">
+                                            <p>$111.11</p>
+                                            <span>x1</span>
+                                        </div>
+                                    </div>
+                                    <div class="gocar">去购物车结算</div>
+                                </div> -->
+                                <!-- 有商品结束 -->
+                            
+                        </div> <!-- col-base-1 end -->
+                    </div>
+                </div>
+            </div> <!-- master-user end -->
+        </div>
+
+    </div>
+    <!-- 导航 -->
+    <nav class="nav module">
+        <div class="line master-nav-wrap">
+            <!-- master-nav -->
+            <div class="unit master-nav cf" style="margin: auto;width: 1210px;">
+                <!-- interaction-menu -->
+                <div class="interaction-menu fl">
+                    <h2><span class="unfold">全部商品分类</span></h2><!-- master-menu-pop -->
+                    <div class="col-left J_Region" data-colname="col-left" data-support="210">
+
+                        <!-- 主菜单(mod-mainmenu) -->
+                        <div class="mod-mainmenu">
+                            <div class="col col-mainmenu">
+                                <!-- 栏目主体(cont) -->
+                                <div class="cont">
+                                    <!-- 菜单列表(list) -->
+                                    <dl class="list list-mainmenu">
+                                        <dt><span style="color:#F00; font-weight:bold">品类专业馆<img
+                                                    src="./img/top/hot.gif"></span></dt>
+                                        <dd><a href="html/list.html" target="_blank">考试专区</a><b></b>
+                                        </dd>
+                                        <dd><a target="_blank">文学频道</a><b></b>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">少儿频道</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">社科频道<b></b></a>
+                                        </dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">经管频道</a><b></b>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">科技频道</a>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">生活频道<b></b></a>
+                                        </dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">文教频道<b></b></a>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">古籍学术</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">少儿</a></dt>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">0-2岁</a><b></b></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">3-6岁</a><b></b></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">7-10岁</a></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">11-14岁</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">启蒙与认知</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">科普百科</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">家庭教育</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">少儿绘本</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">智力游戏</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">少儿英语</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">少儿手工</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">文学小说</a></dt>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">现当代小说</a><b></b>
+                                        </dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">世界名著</a><b></b>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">传记 </a></dd>
+                                        <dd><a href="html/list.html" target="_blank">青春与动漫绘本</a>
+                                        </dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">学习考试</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">教材与教辅</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">注册会计师</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">建筑类考试</a><b></b>
+                                        </dd>
+                                        <dd><a href="html/list.html" target="_blank">辞典与工具书</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">经济管理</a></dt>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">管理学</a><b></b></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">经济与金融</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">投资理财</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">励志与成功</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">成功学</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">心理学</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">心灵励志</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">情商情绪</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">女性励志</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">心灵读物</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">童书</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">儿童文学</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">童话故事</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">必读名著</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">生活</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">家庭与育儿</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">运动健身</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">烹饪与美食</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">时尚美容</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">科技</a></dt>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">计算机与网络</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">科普读物</a></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">工业技术</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">医学</a><b></b></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">建筑</a></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">艺术与摄影</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">摄影</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">绘画</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">书法与字帖</a></dd>
+                                        <dd><a href="html/list.html" target="_blank">鉴赏收藏</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">建筑艺术</a><b></b></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu">
+                                        <dt><a href="html/list.html" target="_blank">人文社科</a></dt>
+                                        <dd><a href="html/list.html" target="_blank">哲学与宗教</a><b></b></dd>
+                                        <dd><a href="html/list.html"
+                                                target="_blank">历史</a><b></b></dd>
+                                        <dd><a href="html/list.html" target="_blank">政治</a><b></b></dd>
+                                    </dl>
+                                    <dl class="list list-mainmenu list-mainmenu-sg">
+                                        <dt><a href="html/list.html" target="_blank">套装书</a></dt>
+                                    </dl>
+                                    <dl class="list list-mainmenu list-mainmenu-sg">
+                                        <dt><a href="html/list.html" target="_blank">音像</a>·<a
+                                                href="html/list.html" target="_blank">百货</a>·<a
+                                                href="html/list.html" target="_blank">电子书</a></dt>
+                                    </dl>
+                                    <dl class="list list-mainmenu list-mainmenu-last">
+                                        <dt><a href="html/list.html"
+                                                target="_blank">全部商品分类&gt;&gt;</a></dt>
+                                    </dl><!-- 菜单列表(list) end -->
+                                    <!-- 菜单列表(list) end -->
+                                </div>
+                            </div>
+                        </div><!-- 主菜单(mod-mainmenu) end -->
+
+                    </div>
+                </div> <!-- master-menu end -->
+                <!-- master-nav-main -->
+                <div class="cf">
+                    <ul class="list master-nav-list fl cf">
+                        <li> <a target="_blank" href="html/list.html">文学频道</a> </li>
+                        <li> <a target="_blank" href="html/list.html">社科频道</a> </li>
+                        <li> <a target="_blank" href="html/list.html">经管频道</a>
+                        </li>
+                        <li> <a target="_blank" href="html/list.html">少儿频道</a>
+                        </li>
+                        <li> <a target="_blank" href="html/list.html">生活频道</a> </li>
+                        <li> <a target="_blank" href="html/list.html">科技频道</a>
+                        </li>
+                        <li> <a target="_blank" href="html/list.html">音像</a> </li>
+                        <li> <a target="_blank" href="html/list.html">百货</a> </li>
+                        <li> <a target="_blank" href="html/list.html">电子书</a> </li>
+                        <li> <a target="_blank" href="html/list.html">国际频道</a>
+                        </li>
+                    </ul>
+                </div> <!-- master-nav-main end -->
+            </div> <!-- master-nav end -->
+        </div>
+
+    </nav>
+    <div class="con xiangqing clearfix">
+        <!-- <div class="xiangqing1 fr">
+            <h2>橘子不是唯一的水果</h2>
+            <p>你的人生，还有别的可能！当代英国炙手可热的作家：张悦然、蒋方舟、任晓雯、刘瑜一致推荐！一部大胆的、光芒四射的小说。就天赋与灵气而言，少有作家能与珍妮特·温特森相比！</p><br>
+            <span>定价：</span> <del>￥111.00</del><br>
+            <span>文轩价：</span> <span class="newp">￥99.40</span><br>
+            <span>作者：</span><span>大大</span><br>
+            <span>分类：</span><span>小说</span><br>
+            <span>促销活动：</span><span class="tehui">
+                ❤特惠品超30本无特价可参加网站满省</span><br>
+            <form><span>购买数量：</span> <input type="button" value="-" class="jian">
+                <input type="text" placeholder="1" class="liang">
+                <input type="button" value="+" class="jia"></form>
+            <div> <img src="img/xiaotu/car.png" alt=""> 加入购物车</div>
+            <span class="fuwu">服　　务 ：由"文轩网"直接销售和发货，并提供售后服务<br>
+                正品低价|闪电发货|货到付款|高效退换货</span>
+        </div>
+        <div class="xiangqingbox">
+            <img src="img/xiaoshuo/20.jpg" jqimg="img/xiaoshuo/20s.jpg" />
+        </div> -->
+
+    </div>
+    <div class="clearfix con">
+        <div class="tese fr">
+            <div class="tese_top">
+                <img src="img/xiaotu/remen.png" class="fl">
+                <div class="tese_top1 fl">特色推荐</div>
+            </div>
+            <div class="fl tese_l">
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/26.jpg">
+                    <div class="book_j">陆垚知马俐</div>
+                    <div>
+                        <p>￥66.66</p>
+                        <del>￥79.99</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/27.jpg">
+                    <div class="book_j">遇上你</div>
+                    <div>
+                        <p>￥35.00</p>
+                        <del>￥49.90</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/29.jpg">
+                    <div class="book_j">最好的我们</div>
+                    <div>
+                        <p>￥25.00</p>
+                        <del>￥32.00</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/30.jpg">
+                    <div class="book_j">秘密</div>
+                    <div>
+                        <p>￥33.00</p>
+                        <del>￥39.90</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/31.jpg">
+                    <div class="book_j">三体</div>
+                    <div>
+                        <p>￥44.66</p>
+                        <del>￥49.99</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/27.jpg">
+                    <div class="book_j">蔡康永的说话之道</div>
+                    <div>
+                        <p>￥25.00</p>
+                        <del>￥39.90</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/24.jpg">
+                    <div class="book_j">黑石之墓</div>
+                    <div>
+                        <p>￥29.99</p>
+                        <del>￥39.99</del>
+                    </div>
+                </a>
+                <a href="#" class="jujiao_book fl">
+                    <img src="img/xiaoshuo/10.jpg">
+                    <div class="book_j">陪你说一世晚安</div>
+                    <div>
+                        <p>￥30.00</p>
+                        <del>￥39.90</del>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom con">
+        <div class="unit ">
+            <!-- main-service-show -->
+            <img src="img/bottom/fx.jpg" alt="">
+            <img src="img/bottom/foot-service.png" alt="">
+            <!-- main-service-show end -->
+        </div>
+        <div class="unit">
+            <!-- main-copyright -->
+            <div class="main-copyright con">
+                <div class="base-nav">
+                    <a href="http://www.winxuan.com/company/about_us.html" rel="nofollow" target="_blank"
+                        title="关于文轩">关于文轩</a> |
+                    <a href="http://www.winxuan.com/company/contact_us.html" rel="nofollow" title="联系文轩">联系文轩</a> |
+                    <a href="http://www.winxuan.com/company/job.html" rel="nofollow" title="加入文轩">加入文轩</a> |
+                    <a href="http://www.winxuan.com/company/partner.html" rel="nofollow" title="合作伙伴">合作伙伴</a>
+                </div>
+                <div class="base-nav"></div>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010602000457"
+                    style="display:inline-block;text-decoration:none;height:20px;line-height:20px;" target="_blank">
+                    <img src="./img/xiaotu/gawj.png" style="float:left;">川公网安备 51010602000457号
+                </a> | 增值电信业务经营许可证：川B2-20100040 | <a href="http://www.winxuan.com/company/about_us.html" rel="nofollow"
+                    target="_blank">出版物经营许可证</a> | 蜀ICP备11014037号<br><br>Copyright(C) <a
+                    href="http://www.winxuan.com/">文轩网</a> 2000-2019 版权所有 |
+                客服热线：400-702-0808 　<br><a
+                    href="http://www.scgswljg.gov.cn/iciaicweb/dzbscheck.do?method=change&amp;amp;id=51010620160511082873"
+                    target="_blank"></a>
+            </div><!-- main-copyright end -->
+        </div>
+    </div>
+
+</body>
+
+</html>

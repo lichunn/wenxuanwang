@@ -1,0 +1,97 @@
+.top{
+    width: 100%;
+}
+
+.master-logo{
+    height: 80px;
+    line-height: 80px;
+}
+/* 注册 */
+.regWrap {
+    margin-top: 20px;
+    border:1px solid #ccc;
+    padding-left:50%;
+    
+}
+
+.regForm {
+    background: #fff;
+    padding: 60px 25px 210px;
+    transform: translate(-75%);
+}
+
+.regWrap .regForm .regTitle {
+    padding-right: 23px;
+    width: 212px;
+    overflow: hidden;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.regWrap .regForm .regTitle b {
+    float: right;
+    color: #333;
+    height: 24px;
+    font-size: 22px;
+    padding-left: 13px;
+    border-left: 3px solid #e60000;
+    font-weight: bold;
+}
+
+.regWrap .regForm .regTitle span {
+    float: left;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #e60000;
+    margin-left: 11px;
+}
+.regWrap form{
+    margin-left: 150px;
+}
+.regWrap form label{
+    display: inline-block;
+    line-height: 30px;
+    width: 100px;
+    text-align: left;
+    float: left;
+}
+.regWrap form input{
+    display: inline-block;
+    width: 300px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.regWrap #show,.regWrap #show2{
+    margin-left: 100px;
+}
+.regWrap form button{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    width: 380px;
+    text-align: center;
+    text-decoration: none;
+    background:#E4393C;
+    font-size: 16px;
+    color: #fff;
+    /* margin-left: 80px; */
+    cursor: default;
+}
+#canvas {
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 5px
+}
+.show{
+    margin-left: 100px;
+    margin-bottom: 15px;
+}
